@@ -15,6 +15,17 @@
 		DAC52FC821F732AD001B1F0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC52FC621F732AD001B1F0F /* LaunchScreen.storyboard */; };
 		DAC52FD321F732AD001B1F0F /* Schwifty_SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC52FD221F732AD001B1F0F /* Schwifty_SearchTests.swift */; };
 		DAC52FDE21F732AD001B1F0F /* Schwifty_SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC52FDD21F732AD001B1F0F /* Schwifty_SearchUITests.swift */; };
+		DAC52FF521F74DA8001B1F0F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC52FF421F74DA8001B1F0F /* SearchViewController.swift */; };
+		DAC52FF721F74DC1001B1F0F /* RecentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC52FF621F74DC1001B1F0F /* RecentViewController.swift */; };
+		DAC52FF921F74DE0001B1F0F /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC52FF821F74DE0001B1F0F /* FavouritesViewController.swift */; };
+		DAC52FFB21F74FCF001B1F0F /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC52FFA21F74FCF001B1F0F /* BaseRequest.swift */; };
+		DAC52FFE21F75343001B1F0F /* CharacterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC52FFD21F75343001B1F0F /* CharacterRequest.swift */; };
+		DAC5300021F753C4001B1F0F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC52FFF21F753C4001B1F0F /* Character.swift */; };
+		DAC5300221F7547F001B1F0F /* ModelRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC5300121F7547F001B1F0F /* ModelRequest.swift */; };
+		DAC5300421F77A9D001B1F0F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC5300321F77A9D001B1F0F /* Location.swift */; };
+		DAC5300721F78511001B1F0F /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAC5300621F78511001B1F0F /* CharacterCell.xib */; };
+		DAC5300921F787EB001B1F0F /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC5300821F787EB001B1F0F /* CharacterCell.swift */; };
+		DAC5300C21F78A2D001B1F0F /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC5300B21F78A2D001B1F0F /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +60,17 @@
 		DAC52FD921F732AD001B1F0F /* Schwifty SearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Schwifty SearchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC52FDD21F732AD001B1F0F /* Schwifty_SearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schwifty_SearchUITests.swift; sourceTree = "<group>"; };
 		DAC52FDF21F732AD001B1F0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAC52FF421F74DA8001B1F0F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DAC52FF621F74DC1001B1F0F /* RecentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentViewController.swift; sourceTree = "<group>"; };
+		DAC52FF821F74DE0001B1F0F /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		DAC52FFA21F74FCF001B1F0F /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		DAC52FFD21F75343001B1F0F /* CharacterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRequest.swift; sourceTree = "<group>"; };
+		DAC52FFF21F753C4001B1F0F /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		DAC5300121F7547F001B1F0F /* ModelRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelRequest.swift; sourceTree = "<group>"; };
+		DAC5300321F77A9D001B1F0F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		DAC5300621F78511001B1F0F /* CharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
+		DAC5300821F787EB001B1F0F /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		DAC5300B21F78A2D001B1F0F /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +121,14 @@
 		DAC52FB921F732AB001B1F0F /* Schwifty Search */ = {
 			isa = PBXGroup;
 			children = (
-				DAC52FBA21F732AB001B1F0F /* AppDelegate.swift */,
-				DAC52FBC21F732AB001B1F0F /* ViewController.swift */,
-				DAC52FBE21F732AB001B1F0F /* Main.storyboard */,
-				DAC52FC421F732AD001B1F0F /* Assets.xcassets */,
-				DAC52FC621F732AD001B1F0F /* LaunchScreen.storyboard */,
-				DAC52FC921F732AD001B1F0F /* Info.plist */,
-				DAC52FC121F732AB001B1F0F /* Schwifty_Search.xcdatamodeld */,
+				DAC5300A21F78A25001B1F0F /* Extensions */,
+				DAC52FFC21F74FEC001B1F0F /* Helpers */,
+				DAC52FF321F74BDE001B1F0F /* Core Data */,
+				DAC52FF221F74BD2001B1F0F /* Supporting Files */,
+				DAC52FF121F74BC4001B1F0F /* Networking */,
+				DAC52FEF21F74B8B001B1F0F /* Models */,
+				DAC52FEE21F74B84001B1F0F /* Services */,
+				DAC52FED21F74B7E001B1F0F /* Views */,
 			);
 			path = "Schwifty Search";
 			sourceTree = "<group>";
@@ -126,6 +149,96 @@
 				DAC52FDF21F732AD001B1F0F /* Info.plist */,
 			);
 			path = "Schwifty SearchUITests";
+			sourceTree = "<group>";
+		};
+		DAC52FED21F74B7E001B1F0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAC5300521F784E0001B1F0F /* Cells */,
+				DAC52FBE21F732AB001B1F0F /* Main.storyboard */,
+				DAC52FC621F732AD001B1F0F /* LaunchScreen.storyboard */,
+				DAC52FBC21F732AB001B1F0F /* ViewController.swift */,
+				DAC52FF421F74DA8001B1F0F /* SearchViewController.swift */,
+				DAC52FF621F74DC1001B1F0F /* RecentViewController.swift */,
+				DAC52FF821F74DE0001B1F0F /* FavouritesViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DAC52FEE21F74B84001B1F0F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DAC52FEF21F74B8B001B1F0F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DAC52FFF21F753C4001B1F0F /* Character.swift */,
+				DAC5300121F7547F001B1F0F /* ModelRequest.swift */,
+				DAC5300321F77A9D001B1F0F /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DAC52FF021F74BB5001B1F0F /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				DAC52FFD21F75343001B1F0F /* CharacterRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		DAC52FF121F74BC4001B1F0F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DAC52FF021F74BB5001B1F0F /* Requests */,
+				DAC52FFA21F74FCF001B1F0F /* BaseRequest.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		DAC52FF221F74BD2001B1F0F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAC52FC421F732AD001B1F0F /* Assets.xcassets */,
+				DAC52FC921F732AD001B1F0F /* Info.plist */,
+				DAC52FBA21F732AB001B1F0F /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAC52FF321F74BDE001B1F0F /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				DAC52FC121F732AB001B1F0F /* Schwifty_Search.xcdatamodeld */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		DAC52FFC21F74FEC001B1F0F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DAC5300521F784E0001B1F0F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DAC5300621F78511001B1F0F /* CharacterCell.xib */,
+				DAC5300821F787EB001B1F0F /* CharacterCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DAC5300A21F78A25001B1F0F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DAC5300B21F78A2D001B1F0F /* UIImageView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +348,7 @@
 				DAC52FC821F732AD001B1F0F /* LaunchScreen.storyboard in Resources */,
 				DAC52FC521F732AD001B1F0F /* Assets.xcassets in Resources */,
 				DAC52FC021F732AB001B1F0F /* Main.storyboard in Resources */,
+				DAC5300721F78511001B1F0F /* CharacterCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +373,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAC5300021F753C4001B1F0F /* Character.swift in Sources */,
+				DAC5300421F77A9D001B1F0F /* Location.swift in Sources */,
+				DAC52FF921F74DE0001B1F0F /* FavouritesViewController.swift in Sources */,
+				DAC5300C21F78A2D001B1F0F /* UIImageView.swift in Sources */,
+				DAC5300921F787EB001B1F0F /* CharacterCell.swift in Sources */,
 				DAC52FC321F732AB001B1F0F /* Schwifty_Search.xcdatamodeld in Sources */,
 				DAC52FBD21F732AB001B1F0F /* ViewController.swift in Sources */,
+				DAC52FFB21F74FCF001B1F0F /* BaseRequest.swift in Sources */,
+				DAC5300221F7547F001B1F0F /* ModelRequest.swift in Sources */,
+				DAC52FF521F74DA8001B1F0F /* SearchViewController.swift in Sources */,
 				DAC52FBB21F732AB001B1F0F /* AppDelegate.swift in Sources */,
+				DAC52FF721F74DC1001B1F0F /* RecentViewController.swift in Sources */,
+				DAC52FFE21F75343001B1F0F /* CharacterRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +562,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VLU7X6Y8EY;
-				INFOPLIST_FILE = "Schwifty Search/Info.plist";
+				INFOPLIST_FILE = "Schwifty Search/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,7 +580,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VLU7X6Y8EY;
-				INFOPLIST_FILE = "Schwifty Search/Info.plist";
+				INFOPLIST_FILE = "Schwifty Search/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
