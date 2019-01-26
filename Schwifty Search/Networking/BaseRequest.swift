@@ -31,26 +31,31 @@ class BaseRequest: NSObject {
     }
     
     func processRequest<Object: Codable>(request: URLRequest, completion: @escaping BaseCompletion<Object>) {
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let responseError = error {
                 DispatchQueue.main.async {
                     completion(nil, responseError)
                 }
             }
             if let response = response as? HTTPURLResponse, let data = data, 200...299 ~= response.statusCode {
-                let decoder = JSONDecoder()
-                if let object = try? decoder.decode(Object.self, from: data){
-                    DispatchQueue.main.async {
-                        completion(object, nil)
+                DispatchQueue.main.async {
+                    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+                    let decoder = JSONDecoder()
+                    guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext else {
+                        fatalError("Failed to retrieve context")
                     }
-                }  else {
-                    let jsonError = NSError(domain: "co.uk.alexanderlogan", code: 404, userInfo: nil)
-                    DispatchQueue.main.async {
+                    decoder.userInfo[codingUserInfoKeyManagedObjectContext] = managedObjectContext
+                    if let object = try? decoder.decode(Object.self, from: data){
+                        completion(object, nil)
+                        try! managedObjectContext.save()
+                    } else {
+                        let jsonError = NSError(domain: "co.uk.alexanderlogan", code: 404, userInfo: nil)
                         completion(nil, jsonError)
                     }
                 }
             }
-            }.resume()
+        }
+        task.resume()
     }
     
     func addRequestHeaders(request: inout URLRequest) {

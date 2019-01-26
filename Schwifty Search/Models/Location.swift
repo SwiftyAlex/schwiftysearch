@@ -7,8 +7,34 @@
 //
 
 import Foundation
+import CoreData
 
-struct Location: Codable {
-    var name: String
-    var url: String
+class Location: NSManagedCodable {
+    @NSManaged var name: String
+    @NSManaged var url: String
+    
+    enum CodingKeys: String, CodingKey {
+        case name, url
+    }
+    
+    // MARK: - Decodable
+    required convenience init(from decoder: Decoder) throws {
+        guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext,
+            let managedObjectContext = decoder.userInfo[codingUserInfoKeyManagedObjectContext] as? NSManagedObjectContext,
+            let entity = NSEntityDescription.entity(forEntityName: "Location", in: managedObjectContext) else {
+                fatalError("Failed to decode Location")
+        }
+        self.init(entity: entity, insertInto: managedObjectContext)
+        
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.name = try container.decode(String.self, forKey: .name)
+        self.url = try container.decode(String.self, forKey: .url)
+    }
+    
+    // MARK: - Encodable
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(name, forKey: .name)
+        try container.encode(url, forKey: .name)
+    }
 }

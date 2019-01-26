@@ -26,6 +26,7 @@
 		DAC5300721F78511001B1F0F /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAC5300621F78511001B1F0F /* CharacterCell.xib */; };
 		DAC5300921F787EB001B1F0F /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC5300821F787EB001B1F0F /* CharacterCell.swift */; };
 		DAC5300C21F78A2D001B1F0F /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC5300B21F78A2D001B1F0F /* UIImageView.swift */; };
+		DADA10A021FCA74900F157C4 /* CodingUserInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA109F21FCA74900F157C4 /* CodingUserInfoKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		DAC5300621F78511001B1F0F /* CharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
 		DAC5300821F787EB001B1F0F /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		DAC5300B21F78A2D001B1F0F /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		DADA109F21FCA74900F157C4 /* CodingUserInfoKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingUserInfoKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				DAC5300B21F78A2D001B1F0F /* UIImageView.swift */,
+				DADA109F21FCA74900F157C4 /* CodingUserInfoKey.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				DAC52FFB21F74FCF001B1F0F /* BaseRequest.swift in Sources */,
 				DAC5300221F7547F001B1F0F /* ModelRequest.swift in Sources */,
 				DAC52FF521F74DA8001B1F0F /* SearchViewController.swift in Sources */,
+				DADA10A021FCA74900F157C4 /* CodingUserInfoKey.swift in Sources */,
 				DAC52FBB21F732AB001B1F0F /* AppDelegate.swift in Sources */,
 				DAC52FF721F74DC1001B1F0F /* RecentViewController.swift in Sources */,
 				DAC52FFE21F75343001B1F0F /* CharacterRequest.swift in Sources */,
