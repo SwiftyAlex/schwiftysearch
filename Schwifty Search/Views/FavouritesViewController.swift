@@ -26,7 +26,9 @@ class FavouritesViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(fetchData))
+        let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(fetchData))
+        refreshButton.tintColor = .white
+        navigationItem.rightBarButtonItem = refreshButton
     }
     
     @objc private func fetchData() {
