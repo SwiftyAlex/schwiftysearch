@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA2686D22209985000DF1864 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2686D12209985000DF1864 /* Decoder.swift */; };
 		DAC52FBB21F732AB001B1F0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC52FBA21F732AB001B1F0F /* AppDelegate.swift */; };
 		DAC52FBD21F732AB001B1F0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC52FBC21F732AB001B1F0F /* ViewController.swift */; };
 		DAC52FC021F732AB001B1F0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC52FBE21F732AB001B1F0F /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		DAC5300921F787EB001B1F0F /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC5300821F787EB001B1F0F /* CharacterCell.swift */; };
 		DAC5300C21F78A2D001B1F0F /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC5300B21F78A2D001B1F0F /* UIImageView.swift */; };
 		DADA10A021FCA74900F157C4 /* CodingUserInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA109F21FCA74900F157C4 /* CodingUserInfoKey.swift */; };
+		DADA10A221FE325B00F157C4 /* NSManagedCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA10A121FE325B00F157C4 /* NSManagedCodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA2686D12209985000DF1864 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
 		DAC52FB721F732AB001B1F0F /* Schwifty Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Schwifty Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC52FBA21F732AB001B1F0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAC52FBC21F732AB001B1F0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 		DAC5300821F787EB001B1F0F /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		DAC5300B21F78A2D001B1F0F /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		DADA109F21FCA74900F157C4 /* CodingUserInfoKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingUserInfoKey.swift; sourceTree = "<group>"; };
+		DADA10A121FE325B00F157C4 /* NSManagedCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedCodable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +226,7 @@
 		DAC52FFC21F74FEC001B1F0F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				DADA10A121FE325B00F157C4 /* NSManagedCodable.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 			children = (
 				DAC5300B21F78A2D001B1F0F /* UIImageView.swift */,
 				DADA109F21FCA74900F157C4 /* CodingUserInfoKey.swift */,
+				DA2686D12209985000DF1864 /* Decoder.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -388,7 +394,9 @@
 				DAC52FF521F74DA8001B1F0F /* SearchViewController.swift in Sources */,
 				DADA10A021FCA74900F157C4 /* CodingUserInfoKey.swift in Sources */,
 				DAC52FBB21F732AB001B1F0F /* AppDelegate.swift in Sources */,
+				DADA10A221FE325B00F157C4 /* NSManagedCodable.swift in Sources */,
 				DAC52FF721F74DC1001B1F0F /* RecentViewController.swift in Sources */,
+				DA2686D22209985000DF1864 /* Decoder.swift in Sources */,
 				DAC52FFE21F75343001B1F0F /* CharacterRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

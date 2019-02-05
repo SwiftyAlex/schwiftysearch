@@ -8,20 +8,21 @@
 
 import Foundation
 import CoreData
+import UIKit
 
-typealias NSManagedCodable = NSManagedObject & Codable
-class Character : NSManagedCodable {
-    @NSManaged var id: Int
+class Character : NSManagedObject, NSManagedCodable {
+    @NSManaged var id: Int16
     @NSManaged var name: String
     @NSManaged var status: String
     @NSManaged var species: String
     @NSManaged var type: String?
     @NSManaged var gender: String
-    @NSManaged var location: Location?
-    @NSManaged var origin: Location?
+//    @NSManaged var location: Location?
+//    @NSManaged var origin: Location?
     @NSManaged var image: String?
     @NSManaged var url: String?
     @NSManaged var episode: [String]?
+    @NSManaged var favourite: Bool
     
     enum CodingKeys: String, CodingKey {
         case id,name,status,species,type,gender,location,origin,image,url,episode
@@ -29,14 +30,9 @@ class Character : NSManagedCodable {
     
     // MARK: - Decodable
     required convenience init(from decoder: Decoder) throws {
-        guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext,
-            let managedObjectContext = decoder.userInfo[codingUserInfoKeyManagedObjectContext] as? NSManagedObjectContext,
-            let entity = NSEntityDescription.entity(forEntityName: "Character", in: managedObjectContext) else {
-                fatalError("Failed to decode Character")
-        }
-        self.init(entity: entity, insertInto: managedObjectContext)
-        
         let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.init(entity: Character.entity(), insertInto: Character.context)
+        self.id = try container.decode(Int16.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
         self.status = try container.decode(String.self, forKey: .status)
         self.species = try container.decode(String.self, forKey: .species)
