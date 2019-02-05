@@ -41,6 +41,8 @@ class BaseRequest: NSObject {
                 DispatchQueue.main.async {
                     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
                     let decoder = JSONDecoder()
+                    decoder.dateDecodingStrategy = .iso8601
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
                     guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext else {
                         fatalError("Failed to retrieve context")
                     }

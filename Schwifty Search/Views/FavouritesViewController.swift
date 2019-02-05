@@ -40,7 +40,7 @@ class FavouritesViewController: UIViewController {
         let results = try! Character.context.fetch(fetchRequest)
         self.characters = results
         
-        UIView.transition(with: collectionView, duration: 0.6, options: .transitionCurlDown, animations: {
+        UIView.transition(with: collectionView, duration: 0.6, options: .transitionCrossDissolve, animations: {
             self.collectionView.reloadData()
         }) { _ in }
     }

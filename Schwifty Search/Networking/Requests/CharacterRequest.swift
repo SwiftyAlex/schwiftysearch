@@ -12,7 +12,7 @@ import CoreData
 class CharacterRequest: BaseRequest {
     typealias CharacterArrayCompletion =  ([Character]?, Error?) -> ()
     
-    let url = "https://rickandmortyapi.com/api/character/"
+    let url = "https://rickandmortyapi.com/api/character"
     
     func fetchCharacters(completion: @escaping CharacterArrayCompletion){
         self.GET(url: url, params: [:], object: ModelRequest<Character>.self, completion: { data, error in

@@ -25,6 +25,11 @@ class RecentViewController: UIViewController {
                 self.collectionView.reloadData()
             }
         }
+        
+        EpisodeRequest().fetchEpisodes {
+            episodes, err in
+            print(episodes)
+        }
     }
     
 }

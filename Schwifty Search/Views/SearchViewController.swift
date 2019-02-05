@@ -34,7 +34,6 @@ extension SearchViewController: UITableViewDataSource {
         let tableCell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
         tableCell.textLabel?.text = characters[indexPath.row].name
         tableCell.detailTextLabel?.text = characters[indexPath.row].species
-        print(characters[indexPath.row].name)
         return tableCell
     }
     
