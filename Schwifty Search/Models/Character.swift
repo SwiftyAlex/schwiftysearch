@@ -17,8 +17,6 @@ class Character : NSManagedObject, NSManagedCodable {
     @NSManaged var species: String
     @NSManaged var type: String?
     @NSManaged var gender: String
-//    @NSManaged var location: Location?
-//    @NSManaged var origin: Location?
     @NSManaged var image: String?
     @NSManaged var url: String?
     @NSManaged var episode: [String]?
