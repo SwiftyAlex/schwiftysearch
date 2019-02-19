@@ -32,9 +32,8 @@ extension SearchViewController: UITableViewDelegate {
 extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableCell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-        tableCell.textLabel?.text = characters[indexPath.row].name
-        tableCell.detailTextLabel?.text = characters[indexPath.row].species
-        print(characters[indexPath.row].name)
+        tableCell.textLabel?.text = filteredCharacters[indexPath.row].name
+        tableCell.detailTextLabel?.text = filteredCharacters[indexPath.row].species
         return tableCell
     }
     
@@ -49,6 +48,7 @@ extension SearchViewController: UITableViewDataSource {
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
         filteredCharacters = characters.filter({
             return $0.name.contains(searchText)
         })

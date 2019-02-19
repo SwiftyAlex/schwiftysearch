@@ -25,7 +25,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T4F-va-6ge">
-                                <rect key="frame" x="16" y="176.5" width="359" height="200"/>
+                                <rect key="frame" x="0.0" y="176.5" width="375" height="200"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="3eq-02-aYo"/>
@@ -34,14 +34,14 @@
                                     <size key="itemSize" width="150" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="T4F-va-6ge" firstAttribute="leading" secondItem="6Nw-dW-Sap" secondAttribute="leading" id="BI4-2T-YjM"/>
+                            <constraint firstItem="T4F-va-6ge" firstAttribute="leading" secondItem="5I0-RY-ogO" secondAttribute="leading" id="BI4-2T-YjM"/>
                             <constraint firstItem="6Nw-dW-Sap" firstAttribute="top" secondItem="5I0-RY-ogO" secondAttribute="top" constant="25" id="Gex-Fq-f6j"/>
                             <constraint firstItem="6Nw-dW-Sap" firstAttribute="leading" secondItem="5I0-RY-ogO" secondAttribute="leading" constant="16" id="S8O-Oc-aDA"/>
                             <constraint firstItem="5I0-RY-ogO" firstAttribute="trailing" secondItem="T4F-va-6ge" secondAttribute="trailing" id="TKl-Be-aqJ"/>
@@ -74,7 +74,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TzW-dk-WG8">
-                                <rect key="frame" x="16" y="124.5" width="359" height="200"/>
+                                <rect key="frame" x="0.0" y="124.5" width="375" height="200"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="oue-Qq-HGl"/>
@@ -83,7 +83,7 @@
                                     <size key="itemSize" width="150" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
@@ -91,7 +91,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Fvs-Ql-1LU" firstAttribute="trailing" secondItem="TzW-dk-WG8" secondAttribute="trailing" id="Eaf-wv-0yN"/>
-                            <constraint firstItem="TzW-dk-WG8" firstAttribute="leading" secondItem="uBk-9q-evc" secondAttribute="leading" id="G55-aX-VW5"/>
+                            <constraint firstItem="TzW-dk-WG8" firstAttribute="leading" secondItem="Fvs-Ql-1LU" secondAttribute="leading" id="G55-aX-VW5"/>
                             <constraint firstItem="uBk-9q-evc" firstAttribute="top" secondItem="Fvs-Ql-1LU" secondAttribute="top" constant="25" id="Tf7-oE-gDI"/>
                             <constraint firstItem="Fvs-Ql-1LU" firstAttribute="trailing" secondItem="uBk-9q-evc" secondAttribute="trailing" id="UHS-nc-PwJ"/>
                             <constraint firstItem="TzW-dk-WG8" firstAttribute="top" secondItem="uBk-9q-evc" secondAttribute="bottom" constant="8" id="lJB-EL-I2E"/>
@@ -117,7 +117,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FTG-Rs-15w">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="PKc-nH-gry">
@@ -131,7 +131,7 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="FEv-1h-E4E" firstAttribute="bottom" secondItem="FTG-Rs-15w" secondAttribute="bottom" id="4ZF-ct-k2i"/>
+                            <constraint firstAttribute="bottom" secondItem="FTG-Rs-15w" secondAttribute="bottom" id="4ZF-ct-k2i"/>
                             <constraint firstItem="FEv-1h-E4E" firstAttribute="trailing" secondItem="PKc-nH-gry" secondAttribute="trailing" id="CTO-bd-19Q"/>
                             <constraint firstItem="PKc-nH-gry" firstAttribute="leading" secondItem="FEv-1h-E4E" secondAttribute="leading" id="Cp4-Ou-LJc"/>
                             <constraint firstItem="FTG-Rs-15w" firstAttribute="leading" secondItem="FEv-1h-E4E" secondAttribute="leading" id="c5q-vq-W87"/>
@@ -166,7 +166,7 @@
         <scene sceneID="GbL-vH-Chk">
             <objects>
                 <tabBarController id="6zg-Uk-Sps" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="NRt-5l-V0I">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NRt-5l-V0I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -209,11 +209,11 @@
             </objects>
             <point key="canvasLocation" x="60" y="1092.5037481259371"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Home-->
         <scene sceneID="t9t-nh-I7Z">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HCI-yE-PiJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="CU9-la-i3Z">
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="CU9-la-i3Z">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -235,4 +235,7 @@
             <point key="canvasLocation" x="60" y="58.920539730134934"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home" width="28" height="28"/>
+    </resources>
 </document>
