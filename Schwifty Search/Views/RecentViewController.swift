@@ -32,14 +32,31 @@ class RecentViewController: UIViewController {
 extension RecentViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let character = characters[indexPath.row]
-        let removeAddText = character.favourite ? "Remove" : "Add"
+        let favouriteCharacters = FavouriteCharacter.storedObjects() as? [FavouriteCharacter]
+        var favouriteCharacterRecord: FavouriteCharacter? = nil
+        var removeAddText = "Add"
+        if let favouriteCharacters = favouriteCharacters {
+            if let fave = (favouriteCharacters.filter {
+                $0.id == character.id
+            }).first {
+                favouriteCharacterRecord = fave
+                removeAddText = "Remove"
+            }
+        }
+        
         let ac = UIAlertController(title: "Schwifty Search", message:
-            removeAddText + " \(character.name) \(character.favourite ? "from" : "to") your favourites?", preferredStyle: .alert)
+            removeAddText + " \(character.name) \(removeAddText == "Add" ? "to": "from") your favourites?", preferredStyle: .alert)
         
         let addAction = UIAlertAction(title: removeAddText, style: .default){
             _ in
-            character.favourite.toggle()
-            try! Character.context.save()
+            if let fave = favouriteCharacterRecord {
+                Context.context.delete(fave)
+            } else {
+                let favouriteCharacter = FavouriteCharacter.init(entity: FavouriteCharacter.entity(), insertInto: Context.context)
+                favouriteCharacter.character = character
+                favouriteCharacter.id = character.id
+            }
+            try! Context.context.save()
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){ _ in ac.dismiss(animated: true, completion: nil)}
         ac.addAction(addAction)

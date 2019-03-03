@@ -23,6 +23,14 @@ struct Context {
     }
 }
 
+extension NSManagedObject  {
+    static func storedObjects() -> [NSManagedObject] {
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: entity().name!)
+        let results = try! Context.context.fetch(fetchRequest)
+        return results
+    }
+}
+
 extension NSManagedCodable where Self: NSManagedObject {
     static var context : NSManagedObjectContext {
         guard let delegate = (UIApplication.shared.delegate as? AppDelegate) else {
@@ -34,7 +42,7 @@ extension NSManagedCodable where Self: NSManagedObject {
     static func storedObjects() -> [Self] {
         let fetchRequest = NSFetchRequest<Self>(entityName: entityName)
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
-        let results = try! Self.context.fetch(fetchRequest)
+        let results = try! Context.context.fetch(fetchRequest)
         return results
     }
 }

@@ -20,7 +20,6 @@ class Character : NSManagedObject, NSManagedCodable {
     @NSManaged var image: String?
     @NSManaged var url: String?
     @NSManaged var episode: [String]?
-    @NSManaged var favourite: Bool
     
     enum CodingKeys: String, CodingKey {
         case id,name,status,species,type,gender,location,origin,image,url,episode
@@ -29,7 +28,7 @@ class Character : NSManagedObject, NSManagedCodable {
     // MARK: - Decodable
     required convenience init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.init(entity: Character.entity(), insertInto: Character.context)
+        self.init(entity: Character.entity(), insertInto:Context.context)
         self.id = try container.decode(Int16.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
         self.status = try container.decode(String.self, forKey: .status)

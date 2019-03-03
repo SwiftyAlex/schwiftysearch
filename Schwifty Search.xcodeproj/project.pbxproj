@@ -29,6 +29,7 @@
 		DAC5300C21F78A2D001B1F0F /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC5300B21F78A2D001B1F0F /* UIImageView.swift */; };
 		DADA10A021FCA74900F157C4 /* CodingUserInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA109F21FCA74900F157C4 /* CodingUserInfoKey.swift */; };
 		DADA10A221FE325B00F157C4 /* NSManagedCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA10A121FE325B00F157C4 /* NSManagedCodable.swift */; };
+		DAEF85AB222BF33D0090E327 /* FavouriteCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF85AA222BF33D0090E327 /* FavouriteCharacter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		DAC5300B21F78A2D001B1F0F /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		DADA109F21FCA74900F157C4 /* CodingUserInfoKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingUserInfoKey.swift; sourceTree = "<group>"; };
 		DADA10A121FE325B00F157C4 /* NSManagedCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedCodable.swift; sourceTree = "<group>"; };
+		DAEF85AA222BF33D0090E327 /* FavouriteCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCharacter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 				DAC52FFF21F753C4001B1F0F /* Character.swift */,
 				DAC5300121F7547F001B1F0F /* ModelRequest.swift */,
 				DAC5300321F77A9D001B1F0F /* Location.swift */,
+				DAEF85AA222BF33D0090E327 /* FavouriteCharacter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			files = (
 				DAC5300021F753C4001B1F0F /* Character.swift in Sources */,
 				DAC5300421F77A9D001B1F0F /* Location.swift in Sources */,
+				DAEF85AB222BF33D0090E327 /* FavouriteCharacter.swift in Sources */,
 				DAC52FF921F74DE0001B1F0F /* FavouritesViewController.swift in Sources */,
 				DAC5300C21F78A2D001B1F0F /* UIImageView.swift in Sources */,
 				DAC5300921F787EB001B1F0F /* CharacterCell.swift in Sources */,

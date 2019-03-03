@@ -41,10 +41,6 @@ class BaseRequest: NSObject {
                 DispatchQueue.main.async {
                     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
                     let decoder = JSONDecoder()
-                    guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext else {
-                        fatalError("Failed to retrieve context")
-                    }
-                    decoder.userInfo[codingUserInfoKeyManagedObjectContext] = managedObjectContext
                     if let object = try? decoder.decode(Object.self, from: data){
                         completion(object, nil)
                         try! managedObjectContext.save()

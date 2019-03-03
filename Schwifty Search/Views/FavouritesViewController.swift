@@ -33,11 +33,10 @@ class FavouritesViewController: UIViewController {
     
     @objc private func fetchData() {
         // fetch core data instead
-        let predicate = NSPredicate(format: "favourite = YES")
-        let fetchRequest = NSFetchRequest<Character>(entityName: Character.entityName)
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
-        fetchRequest.predicate = predicate
-        let results = try! Character.context.fetch(fetchRequest)
+        let results = FavouriteCharacter.storedObjects().map { (favouriteCharacter) -> Character in
+            return (favouriteCharacter as! FavouriteCharacter).character
+        }
+        
         self.characters = results
         
         UIView.transition(with: collectionView, duration: 0.6, options: .transitionCurlDown, animations: {
@@ -49,14 +48,23 @@ class FavouritesViewController: UIViewController {
 extension FavouritesViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let character = characters[indexPath.row]
-        let removeAddText = character.favourite ? "Remove" : "Add"
+        var removeAddText = "Add"
+        let favouriteCharacter = FavouriteCharacter.storedObjects() as? [FavouriteCharacter]
+        if let favouriteCharacters = favouriteCharacter {
+            if (favouriteCharacters.filter {
+                $0.id == character.id
+            }).first != nil {
+                removeAddText = "Remove"
+            }
+        }
+        
         let ac = UIAlertController(title: "Schwifty Search", message:
-            removeAddText + " \(character.name) \(character.favourite ? "from" : "to") your favourites?", preferredStyle: .alert)
+            removeAddText + " \(character.name) \(removeAddText == "add" ? "to": "from") your favourites?", preferredStyle: .alert)
         
         let addAction = UIAlertAction(title: removeAddText, style: .default){
             _ in
-            character.favourite.toggle()
-            try! Character.context.save()
+//            character.favourite.toggle()
+            try! Context.context.save()
             self.fetchData()
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){ _ in ac.dismiss(animated: true, completion: nil)}

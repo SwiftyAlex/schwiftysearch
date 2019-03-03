@@ -19,7 +19,7 @@ class CharacterRequest: BaseRequest {
             if error != nil {
                 completion(Character.storedObjects(), error)
             } else {
-                try! Character.context.save()
+                try! Context.context.save()
                 return completion(Character.storedObjects(), nil )
             }
         })

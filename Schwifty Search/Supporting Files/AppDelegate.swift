@@ -55,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         */
         let container = NSPersistentContainer(name: "Schwifty_Search")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump
+            container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
